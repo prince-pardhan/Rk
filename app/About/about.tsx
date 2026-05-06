@@ -53,6 +53,7 @@ const skills = [
   { name: "API Dev" },
   { name: "MongoDB" },
   { name: "Python" },
+  { name: "Git & GitHub" },
 ];
 
 // 🔥 FIX: better graph values (auto avg)
@@ -78,11 +79,9 @@ export default function SkillsSection() {
     >
       <Container size="lg">
 
-        <Title order={2} mb={40} ta="center">
-          My Skills
-        </Title>
+       
 
-        <Grid >
+        <Grid >   
 
           {/* 🔹 LEFT */}
           <Grid.Col span={{ base: 12, md: 6 }}>
@@ -161,19 +160,19 @@ export default function SkillsSection() {
                   borderRadius: "20px",
                   background: "rgba(255,255,255,0.03)",
                   backdropFilter: "blur(10px)",
-                  border: "1px solid rgba(255,255,255,0.08)",
+                  border: "1px solid rgba(0, 0, 0, 0.08)",
                   width: "100%",
                   maxWidth: "320px",
                 }}
               >
                 <RingProgress
-                  size={220} // 🔥 mobile friendly
+                  size={210} // 🔥 mobile friendly
                   thickness={22}
                   roundCaps
                   sections={circleData}
                   label={
                     <Center>
-                      <Text fw={700} size="sm">
+                      <Text fw={900} size="sm">
                         Skills
                       </Text>
                     </Center>
@@ -188,7 +187,7 @@ export default function SkillsSection() {
                         style={{
                           width: 8,
                           height: 8,
-                          borderRadius: "50%",
+                          borderRadius: "60%",
                           background: item.color,
                         }}
                       />

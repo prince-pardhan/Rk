@@ -156,7 +156,7 @@ export default function Portfolio() {
                             style={{
                                 width: "260px",
                                 height: "300px",
-                                background: "#22d3ee",
+                                background: "#00ddff",
                                 clipPath:
                                     "polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%)",
                                 padding: "5px",
@@ -173,7 +173,7 @@ export default function Portfolio() {
                                 }}
                             >
                                 <img
-                                    src="/v.jpeg"
+                                    src="/i.png"
                                     alt="profile"
                                     style={{
                                         width: "100%",
