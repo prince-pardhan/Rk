@@ -17,7 +17,7 @@ import {
     IconBrandWhatsapp,
     IconPhone,
 } from "@tabler/icons-react";
-const menuItems = ["Home", "About", "Skills", "Portfolio", "Contact"];
+// const menuItems = ["Home", "About", "Skills", "Portfolio", "Contact"];
 export default function Portfolio() {
     return (
         <Box
@@ -39,47 +39,29 @@ export default function Portfolio() {
                 }}
             >
                 {/* Navbar */}
-                <Box
-                    style={{
-                        padding: "12px 24px",
-                        borderRadius: "12px",
-                        background: "#0f172a",
-                        border: "1px solid rgba(255,255,255,0.1)",
-                        width: "fit-content",
-                    }}
-                >
-                    <Group gap="lg">
-                        {menuItems.map((item, index) => (
-                            <Text
-                                key={index}
-                                style={{
-                                    cursor: "pointer",
-                                    color: index === 0 ? "#22d3ee" : "#9ca3af",
-                                    transition: "0.3s",
-                                }}
-                                className="menu-item"
-                            >
-                                {item}
-                            </Text>
-                        ))}
-                    </Group>
 
-                    {/* Hover Style */}
-                    <style jsx>{`
-        .menu-item:hover {
-          color: #22d3ee;
-        }
-      `}</style>
-                </Box>
 
                 {/* Hero */}
                 <Group justify="space-between" align="center">
                     {/* LEFT */}
-                    <Box style={{ maxWidth: "500px" }}>
+                    <Box style={{ maxWidth: "900px" }}>
 
 
-                        <Title size={40} fw={700} c="white">
-                            Rahul swami
+                        <Title
+                            order={1}
+                            style={{
+                                fontSize: "48px",
+                                fontWeight: 600,
+                                lineHeight: 1.1,
+                                background:
+                                    "linear-gradient(90deg, #0022ff 0%, #ff0000 40%, #00ff15 100%)",
+                                WebkitBackgroundClip: "text",
+                                WebkitTextFillColor: "transparent",
+                                textShadow: "0 5px 25px rgba(59,130,246,0.25)",
+                                letterSpacing: "1px",
+                            }}
+                        >
+                            Rahul Swami
                         </Title>
 
                         <Text mt="sm">
@@ -90,11 +72,29 @@ export default function Portfolio() {
                         </Text>
 
                         <Text c="dimmed" mt="md">
-                            Hello, I'm Rahul Swami, a passionate and dedicated Full Stack Developer.
-                            I specialize in building modern, responsive, and scalable web
+                            Hello, I'm Rahul Swami, a passionate  <br /> and dedicated Full Stack Developer.
+                            I specialize <br /> in building modern, responsive, and scalable web
                             applications using the latest technologies.
-                        </Text>
-
+                        </Text> <br />
+                        <Button
+                            size="lg"
+                            radius="xl"
+                            variant="filled"
+                            styles={{
+                                root: {
+                                    // background:
+                                    //     "linear-gradient(135deg, #06b6d4 0%, #3b82f6 45%, #8b5cf6 100%)",
+                                    color: "white",
+                                    fontWeight: 900,
+                                    letterSpacing: "0.5px",
+                                    paddingInline: "20px",
+                                    height: "30px",
+                                   
+                                },
+                            }}
+                        >
+                            3 Months Experience
+                        </Button>
                         {/* Social Icons */}
                         <Group mt="md">
                             {/* Call Button */}
@@ -121,9 +121,9 @@ export default function Portfolio() {
                             </ActionIcon>
                         </Group>
                         <a href="https://www.youtube.com/@RkWriter001" target="_blank">
-                        <Button mt="xl" radius="xl" color="cyan" >
-                            Youtube
-                        </Button>
+                            <Button mt="xl" radius="xl" color="cyan" >
+                                Youtube
+                            </Button>
                         </a>
                     </Box>
 

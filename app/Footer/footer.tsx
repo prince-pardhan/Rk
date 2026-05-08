@@ -58,7 +58,7 @@ export default function Footer() {
                         <Text
                             c="dimmed"
                             mt="sm"
-                            maw={300}
+                            maw={200}
                             style={{
                                 lineHeight: 1.6,
                                 fontSize: "14px",
@@ -73,7 +73,7 @@ export default function Footer() {
                     <Box mt="lg">
                         <Text fw={900} mb="sm" c="red" >
 
-                            Quick Links
+                            Links = 1
                             <Divider my="lg" />
                         </Text>
 
@@ -81,9 +81,7 @@ export default function Footer() {
                             { name: "Password", link: "https://prince-pardhan.github.io/new-repo/", color: "#22c55e" },
                             { name: "AI", link: "https://voice-mind-ai.vercel.app/", color: "#06b6d4" },
                             { name: "Green-Farma", link: "https://prince-pardhan.github.io/farming/", color: "#84cc16" },
-                            { name: "Flamtun", link: "https://flamtun.vercel.app/", color: "#f97316" },
-                            { name: "Rahul", link: "https://rkswami.vercel.app/", color: "#a855f7" },
-                            { name: "Ramesh", link: "https://prince-pardhan.github.io/rameshkumar/", color: "#ec4899" },
+                           
                         ].map((item, index) => (
                             <a key={index} href={item.link} target="_blank" style={{ textDecoration: "none" }}>
                                 <Text
@@ -107,9 +105,46 @@ export default function Footer() {
                             </a>
                         ))}
                     </Box>
+                    <Box mt="lg">
+                        <Text fw={900} mb="sm" c="red" >
 
+                            Links = 2
+                            <Divider my="lg" />
+                        </Text>
+
+                        {[
+                           
+                            { name: "Flamtun", link: "https://flamtun.vercel.app/", color: "#f97316" },
+                            { name: "Rahul", link: "https://rkswami.vercel.app/", color: "#a855f7" },
+                            { name: "Ramesh", link: "https://prince-pardhan.github.io/rameshkumar/", color: "#ec4899" },
+                            { name: "shikshapay", link: "https://shikshapay.cloud/institute/INST-474efcbb-29cc-4a64-9cf1-a16fed4128ac/khariwal%20software%20junction", color: "#484bec" },
+                        ].map((item, index) => (
+                            <a key={index} href={item.link} target="_blank" style={{ textDecoration: "none" }}>
+                                <Text
+                                    mt={6}
+                                    style={{
+                                        color: item.color,
+                                        transition: "all 0.3s ease",
+                                        fontWeight: 500,
+                                    }}
+                                    onMouseEnter={(e) => {
+                                        e.currentTarget.style.transform = "translateX(6px)";
+                                        e.currentTarget.style.textShadow = `0 0 8px ${item.color}`;
+                                    }}
+                                    onMouseLeave={(e) => {
+                                        e.currentTarget.style.transform = "translateX(0)";
+                                        e.currentTarget.style.textShadow = "none";
+                                    }}
+                                >
+                                    {item.name}
+                                </Text>
+                            </a>
+                        ))}
+                    </Box>
+ 
                     {/* Contact + Social */}
                     <Box>
+                        <Divider my="lg" />
                         <Text fw={600} mb="sm">
                             Connect With Me
                             <Divider my="lg" />

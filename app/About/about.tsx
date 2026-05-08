@@ -13,6 +13,7 @@ import {
   Group,
   Paper,
   Badge,
+  Button,
 } from "@mantine/core";
 
 const skillCategories = [
@@ -54,6 +55,7 @@ const skills = [
   { name: "MongoDB" },
   { name: "Python" },
   { name: "Git & GitHub" },
+  { name: "TypeScript" },
 ];
 
 // 🔥 FIX: better graph values (auto avg)
@@ -79,9 +81,9 @@ export default function SkillsSection() {
     >
       <Container size="lg">
 
-       
 
-        <Grid >   
+
+        <Grid >
 
           {/* 🔹 LEFT */}
           <Grid.Col span={{ base: 12, md: 6 }}>
@@ -194,10 +196,51 @@ export default function SkillsSection() {
                       <Text size="xs">
                         {item.label} ({Math.round(item.value)}%)
                       </Text>
+
                     </Group>
                   ))}
                 </Stack>
+                <Stack align="center" mb={50}>
+                  <Title
+                    order={1}
+                    style={{
+                      fontSize: "42px",
+                      fontWeight: 900,
+                      textAlign: "center",
+                      background:
+                        "linear-gradient(90deg,#22d3ee,#4ade80,#facc15)",
+                      WebkitBackgroundClip: "text",
+                      WebkitTextFillColor: "transparent",
+                    }}
+                  >
+                    Experience
+                  </Title>
 
+                  <Text c="dimmed" ta="center" maw={700}>
+                    Full Stack Developer with strong experience in frontend,
+                    backend, API development, and scalable database systems.
+                    Worked on backend development for ShikshaPay and Green-Farma.
+                  </Text>
+                </Stack>
+                <Button
+                  size="md"
+                  radius="xl"
+                  variant="gradient"
+                  gradient={{ from: "cyan", to: "lime", deg: 90 }}
+                  styles={{
+                    root: {
+                      fontWeight: 700,
+                      paddingInline: "22px",
+                      height: "48px",
+                      boxShadow: "0 8px 25px rgba(34,211,238,0.35)",
+                      border: "1px solid rgba(255,255,255,0.12)",
+                      transition: "all 0.3s ease",
+                    },
+                  }}
+                  className="hover:scale-105"
+                >
+                  3 Months Experience
+                </Button>
               </Box>
             </Center>
           </Grid.Col>
