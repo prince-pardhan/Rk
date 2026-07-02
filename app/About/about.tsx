@@ -14,6 +14,7 @@ import {
   Paper,
   Badge,
   Button,
+  Card,
 } from "@mantine/core";
 
 const skillCategories = [
@@ -167,80 +168,61 @@ export default function SkillsSection() {
                   maxWidth: "320px",
                 }}
               >
-                <RingProgress
-                  size={210} // 🔥 mobile friendly
-                  thickness={22}
-                  roundCaps
-                  sections={circleData}
-                  label={
-                    <Center>
-                      <Text fw={900} size="sm">
-                        Skills
-                      </Text>
-                    </Center>
-                  }
-                />
+
 
                 {/* Legend */}
                 <Stack mt="md" gap={4}>
                   {circleData.map((item, i) => (
                     <Group key={i} gap={6}>
-                      <Box
+                      {/* <Box
                         style={{
                           width: 8,
                           height: 8,
                           borderRadius: "60%",
                           background: item.color,
                         }}
-                      />
-                      <Text size="xs">
+                      /> */}
+                      {/* <Text size="xs">
                         {item.label} ({Math.round(item.value)}%)
-                      </Text>
+                      </Text> */}
 
                     </Group>
                   ))}
                 </Stack>
                 <Stack align="center" mb={50}>
-                  <Title
-                    order={1}
-                    style={{
-                      fontSize: "42px",
-                      fontWeight: 900,
-                      textAlign: "center",
-                      background:
-                        "linear-gradient(90deg,#22d3ee,#4ade80,#facc15)",
-                      WebkitBackgroundClip: "text",
-                      WebkitTextFillColor: "transparent",
-                    }}
-                  >
-                    Experience
-                  </Title>
 
-                  <Text c="dimmed" ta="center" maw={700}>
-                    Full Stack Developer with strong experience in frontend,
-                    backend, API development, and scalable database systems.
-                    Worked on backend development for ShikshaPay and Green-Farma.
-                  </Text>
+
+                  <Card
+                    shadow="lg"
+                    padding="xl"
+                    radius="md"
+                    withBorder
+                    style={{ maxWidth: 450, margin: 'auto', backgroundColor: '#1a1b1e' }} // Exemplo em tema escuro
+                  >
+                    {/* Seção do Título */}
+                    <Stack align="center" >
+                      <Text
+                        ta="center"
+                        fw={800}
+                        fz={{ base: 22, md: 28 }}
+                        style={{
+                          background: "linear-gradient(135deg, #00ffa6, #00e1ff, #2b00ff, #ff0073)",
+                          WebkitBackgroundClip: "text",
+                          WebkitTextFillColor: "transparent",
+                        }}
+                      >
+                        RKSwami Software Development
+                      </Text>
+
+                      <Badge color="red" variant="filled" size="lg">
+                        Full Stack Developer
+                      </Badge>
+                    </Stack>
+
+                    {/* Os tópicos ficariam aqui embaixo mais organizados */}
+                  </Card>
                 </Stack>
-                <Button
-                  size="md"
-                  radius="xl"
-                  variant="gradient"
-                  gradient={{ from: "cyan", to: "lime", deg: 90 }}
-                  styles={{
-                    root: {
-                      fontWeight: 700,
-                      paddingInline: "22px",
-                      height: "48px",
-                      boxShadow: "0 8px 25px rgba(34,211,238,0.35)",
-                      border: "1px solid rgba(255,255,255,0.12)",
-                      transition: "all 0.3s ease",
-                    },
-                  }}
-                  className="hover:scale-105"
-                >
-                  3 Months Experience
-                </Button>
+               
               </Box>
             </Center>
           </Grid.Col>

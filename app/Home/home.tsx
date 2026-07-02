@@ -17,6 +17,9 @@ import {
     IconBrandWhatsapp,
     IconPhone,
 } from "@tabler/icons-react";
+import Link from "next/link";
+import { CgProfile } from "react-icons/cg";
+
 // const menuItems = ["Home", "About", "Skills", "Portfolio", "Contact"];
 export default function Portfolio() {
     return (
@@ -51,7 +54,7 @@ export default function Portfolio() {
                             order={1}
                             style={{
                                 fontSize: "48px",
-                                fontWeight: 600,
+                                fontWeight: 900,
                                 lineHeight: 1.1,
                                 background:
                                     "linear-gradient(90deg, #0022ff 0%, #ff0000 40%, #00ff15 100%)",
@@ -61,8 +64,9 @@ export default function Portfolio() {
                                 letterSpacing: "1px",
                             }}
                         >
-                            Rahul Swami
+                            (AR group)
                         </Title>
+                       
 
                         <Text mt="sm">
 
@@ -76,25 +80,7 @@ export default function Portfolio() {
                             I specialize <br /> in building modern, responsive, and scalable web
                             applications using the latest technologies.
                         </Text> <br />
-                        <Button
-                            size="lg"
-                            radius="xl"
-                            variant="filled"
-                            styles={{
-                                root: {
-                                    // background:
-                                    //     "linear-gradient(135deg, #06b6d4 0%, #3b82f6 45%, #8b5cf6 100%)",
-                                    color: "white",
-                                    fontWeight: 900,
-                                    letterSpacing: "0.5px",
-                                    paddingInline: "20px",
-                                    height: "30px",
-                                   
-                                },
-                            }}
-                        >
-                            3 Months Experience
-                        </Button>
+
                         {/* Social Icons */}
                         <Group mt="md">
                             {/* Call Button */}
@@ -124,7 +110,14 @@ export default function Portfolio() {
                             <Button mt="xl" radius="xl" color="cyan" >
                                 Youtube
                             </Button>
-                        </a>
+                        </a>  <br/>
+
+                         <Link href="/profile">
+                            <Button variant="outline" color="cyan" mt="md" fw={900}>
+                                chak profile
+                            </Button>
+                        </Link>
+
                     </Box>
 
                     {/* RIGHT - HEXAGON IMAGE */}
